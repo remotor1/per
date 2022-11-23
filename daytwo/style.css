@@ -1,0 +1,167 @@
+:root {
+    --clr: #ff0019;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #2A2C2F;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    padding: 0;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 300px;
+    grid-template-areas:
+        "header header header"
+        "content content aside"
+        "content content ."
+        "footer footer footer";
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1280px;
+    font-family: Inter, sans-serif;
+    background: #2A2C2F;
+}
+
+
+.header {
+    grid-area: header;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__title {
+    padding: 0 20px;
+}
+
+.logo__title h1 {
+    font-size: 30px;
+    color: var(--clr);
+    text-shadow: 0 0 2px var(--clr);
+}
+
+.logo__title h2 {
+    font-size: 22px;
+    color: #0f0e0e;
+    color: var(--clr);
+    text-shadow: 0 0 2px var(--clr);
+
+}
+
+.logo__image {
+    width: 65px;
+    height: 65px;
+
+}
+
+.content {
+    grid-area: content;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.photo-grid {
+    display: grid;
+    width: 100%;
+    margin: 32px auto 0;
+    padding: 0 48px;
+    grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+    gap: 16px;
+}
+
+.photo-grid__item {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.photo-grid__item:hover {
+    opacity: .7;
+}
+
+.aside {
+    margin: 30px 0;
+    padding: 22px;
+    line-height: 150%;
+}
+
+
+
+@media (max-width: 768px) {
+    .photo-grid {
+        margin: 18px auto 0;
+        padding: 0 24px;
+    }
+
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "aside"
+            "content"
+            "footer ";
+    }
+}
+
+.photo-grid__item {
+    width: 100%;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.aside h1 {
+    padding: 10px;
+    font-size: 32px;
+}
+
+.aside p {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.footer {
+    margin: 40px 0 0;
+    padding: 20px;
+    grid-area: footer;
+}
+
+
+
+
+/* 
+@media (max-width: 320px) {
+    .photo-grid {
+        max-width: 288px;
+        margin: 64px auto 0;
+        padding: 0 16px;
+    }
+} */
+
+
+/* @media (max-width: 1024px) {
+    .photo-grid {
+        max-width: 928px;
+        max-width: 100%;
+    }
+} */
