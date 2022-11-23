@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background-color: #2A2C2F;
+
     color: rgb(255, 255, 255);
     /* outline: 2px dotted pink; */
 }
@@ -15,12 +15,13 @@
 
 
 body {
+    background-color: #2A2C2F;
     margin: 0;
     padding: 0;
 }
 
 .page {
-    padding: 0;
+    padding: 0 20px;
     display: grid;
 
     grid-template-columns: 1fr 1fr 300px;
@@ -64,7 +65,7 @@ header {
     font-size: 22px;
     color: #0f0e0e;
     color: var(--clr);
-    text-shadow: 0 0 2px var(--clr);
+    text-shadow: 0 0 1px var(--clr);
 }
 
 .logo__image {
@@ -89,6 +90,7 @@ header {
 }
 
 .photo-grid__item {
+    border-radius: 10px;
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -130,17 +132,24 @@ header {
 
 .aside {
     grid-area: aside;
+    background-color: #353535;
+    border-radius: 20px;
+    box-shadow:
+        0 5px 8px rgb(34, 34, 34),
+        -5px -8px 20px rgb(36, 36, 36);
 }
 
 .aside h1 {
     padding: 10px;
     font-size: 32px;
+
 }
 
 .aside p {
     margin: 20px 0;
     padding: 5px 0;
     font-size: 16px;
+
 }
 
 .footer {
