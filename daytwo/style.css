@@ -135,8 +135,8 @@ header {
     background-color: #353535;
     border-radius: 20px;
     box-shadow:
-        0 5px 8px rgb(34, 34, 34),
-        -5px -8px 20px rgb(36, 36, 36);
+        0 5px 8px rgba(34, 34, 34, 0.589),
+        -5px -8px 20px rgba(36, 36, 36, 0.712);
 }
 
 .aside h1 {
